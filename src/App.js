@@ -1,3 +1,9 @@
+/*
+DAUGVis Steering UI
+Desription: User Sterring UI for DAUGVis
+Contributers: NW Lee
+*/
+
 import React from 'react'
 import './App.css'
 
