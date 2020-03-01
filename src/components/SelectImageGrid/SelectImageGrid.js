@@ -4,15 +4,24 @@ import GridListTile from '@material-ui/core/GridListTile';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import Button from '@material-ui/core/Button';
 
-import './ImageGrid.css';
+import './SelectImageGrid.css';
 
-export default class ImageGrid extends Component {
+export default class SelectImageGrid extends Component {
     constructor(props) {
     	super(props);
     };
 
+    handleContentData = (data) => {
+        this.props.onContentDataState()
+        this.props.putDataToContent(data)
+    }
+
+    handleStyleData = (data) => {
+        this.props.onStyleDataState()
+        this.props.putDataToStyle(data)
+    }
+
     render() {
-        console.log(this.props.sampleData, this.props.contentData)
         return (
             <div className="root">
                 <GridList cellHeight={130} className="gridList" cols={4}>
@@ -28,11 +37,11 @@ export default class ImageGrid extends Component {
                                         <img src={data.src} alt={data.key}/>
                                         <div class="overlay"></div>
                                         <div class="buttonContent">
-                                            {Object.keys(this.props.contentData).length < 1
+                                            {/* {Object.keys(this.props.contentData).length < 1
                                                 ?   <Button 
                                                         variant="contained"
                                                         size="small"
-                                                        onClick={() => this.props.putDataToContent(data)}
+                                                        onClick={() => this.handleContentData(data)}
                                                     >
                                                         CONTENT
                                                     </Button>
@@ -43,15 +52,21 @@ export default class ImageGrid extends Component {
                                                     >
                                                         CONTENT
                                                     </Button>
-                                            }
-                                            
+                                            } */}
+                                            <Button 
+                                                variant="contained"
+                                                size="small"
+                                                onClick={() => this.handleContentData(data)}
+                                            >
+                                                CONTENT
+                                            </Button>
                                         </div>
                                         <div class="buttonStyle">
                                             <Button 
                                                 variant="contained"
                                                 color="primary"
                                                 size="small"
-                                                onClick={() => this.props.putDataToStyle(data)}
+                                                onClick={() => this.handleStyleData(data)}
                                             >
                                                 STYLE
                                             </Button>

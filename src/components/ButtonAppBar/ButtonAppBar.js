@@ -18,19 +18,19 @@ const useStyles = makeStyles(theme => ({
     },
   }));
 
-  export function ButtonAppBar() {
-    const classes = useStyles();
-  
-    return (
-      <div className={classes.root}>
-        <AppBar position="fixed">
-          <Toolbar>
-            <Typography variant="h6" className={classes.title}>
-              DAUGVis
-            </Typography>
-            <Button color="inherit">Login</Button>
-          </Toolbar>
-        </AppBar>
-      </div>
-    );
-  }
+export default function ButtonAppBar() {
+  const classes = useStyles();
+
+  return (
+    <div className={classes.root}>
+      <AppBar position="fixed">
+        <Toolbar>
+          <Typography variant="h6" className={classes.title}>
+            DAUGVis
+          </Typography>
+          <Button color="inherit">Login</Button>
+        </Toolbar>
+      </AppBar>
+    </div>
+  );
+}

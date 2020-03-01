@@ -3,13 +3,13 @@
     flex-wrap: wrap;
     justify-content: space-around;
     overflow: hidden;
-    width: 70%;
-    padding-left: 8%;
+    width: calc(100% - 300px);
     margin-left: 300px;
     /* backgroundColor: theme.palette.background.paper, */
 }
 
 .gridList {
+    width: 70%;
     padding-left: 100px;
     padding-right: 100px;
 }

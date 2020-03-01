@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux'
-import data from './data'
+import selectData from './selectData'
+import resultData from './resultData'
 
 export default combineReducers({
-    data,
+    selectData,
+    resultData
 });

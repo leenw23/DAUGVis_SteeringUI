@@ -1,0 +1,14 @@
+/* Image Component */
+.styleImgComponent img{
+    /* width: inherit; */
+    height: inherit;
+}
+
+.classImgComponent img{
+    /* width: inherit; */
+    height: inherit;
+}
+
+.classImgComponent img:hover{
+    opacity: 0.7;
+}

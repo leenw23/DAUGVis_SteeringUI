@@ -6,22 +6,20 @@ Contributers: NW Lee
 
 import React from 'react'
 import './App.css'
+import { Route, BrowserRouter as Router } from "react-router-dom";
 
-import { ButtonAppBar } from "./components/ButtonAppBar/ButtonAppBar.js"
-// import { SideDrawer } from "./components/SideDrawer/SideDrawer.js"
-// import { ImageGrid } from "./components/ImageGrid/ImageGrid.js"
-import ImageGridContainer from "./containers/ImageGridContainer.js"
-import SideDrawerContainer from "./containers/SideDrawerContainer.js"
+import SelectPage from "./screens/SelectPage.js"
+import ResultPage from "./screens/ResultPage.js"
 
 function App() {
 
   return (
-    <div>
-      {ButtonAppBar()}
-      {/* {SideDrawer()} */}
-      <SideDrawerContainer />
-      <ImageGridContainer />
-    </div>
+    <Router>
+      <main>
+        <Route exact path="/" component={SelectPage} />
+        <Route exact path="/result" component={ResultPage} />
+      </main>
+    </Router>
   );
 }
 
